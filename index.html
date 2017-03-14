@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<title>IFE JavaScript Task 01</title>
+	</head>
+
+	<body>
+		<div class="root">
+
+			<label>请输入北京今天空气质量：<input  v-model='message' id="aqi-input" type="text"></label>
+			<button id="button" @click="inn">确认填写</button>
+
+			<div>您输入的值是：<span id="aqi-display" v-text='mess1'></span></div>
+		</div>
+		<script src="js/vue.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript">
+			new Vue({
+				el: ".root",
+				data: {
+					mess1: '尚无录入',
+					message: ''
+				},
+				methods: {
+					inn() {
+						this.mess1 = this.message;
+					}
+				}
+
+			})
+		</script>
+	</body>
+
+</html>
